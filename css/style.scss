@@ -1,0 +1,137 @@
+
+
+$font-family_footer: "Montserrat";
+$font-family_asap: "Asap";
+$font-color_text-main: #4d4d4d;
+$font-color_text-info: #212121;
+
+$bg-color_first:  #ffffff;
+$bg-color_second:  #f6f6f6;
+
+
+h1{
+  color: $font-color_text-main;
+  font-size: 90px;
+  font-family: $font-family_asap;
+  font-weight: 500;
+}
+
+h3{
+  color: $font-color_text-main;
+  font-size: 46px;
+  font-family: $font-family_asap;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h5{
+  font-size: 30px;
+  font-family: $font-family_asap;
+  font-weight: 500;
+  color: $font-color_text-info;
+}
+
+p{
+  color: $font-color_text-main;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+span{
+  color: $font-color_text-main;
+  font-size: 22px;
+  font-family: $font-family_asap;
+  font-weight: 500;
+}
+
+a{
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $font-color_text-main;
+  font-family: $font-family_asap;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+li>a{
+  font-weight: 400;
+}
+
+button{
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $font-color_text-main;
+  font-family: $font-family_asap;
+  font-weight: 500;
+}
+
+
+.about{
+  background-color: $bg-color_first;
+}
+
+
+.services{
+  background-color: $bg-color_second;
+  span{
+    font-size: 24px;
+  }
+}
+
+.skills{
+  background-color: $bg-color_first;
+}
+
+.portfolio{
+  background-color: $bg-color_second;
+}
+
+.testimonials{
+  background-color: $bg-color_first;
+  span{
+    font-family: $font-family_asap;
+    font-style: italic;
+    color: $font-color_text-info;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  p{
+    color: $font-color_text-info;
+  }
+}
+
+
+.statistics{
+  background-color: $bg-color_second;
+  span{
+    color: $font-color_text-info;
+  }
+}
+
+.empty{
+  background-color: $bg-color_first;
+  height: 155px;
+}
+
+
+.message{
+  h3{
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+
+
+footer{
+  span{
+    color:#ffffff;
+    font-size: 16px;
+    font-family: $font-family_footer;
+    font-weight: 400;
+  }
+}
+
