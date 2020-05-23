@@ -126,12 +126,32 @@ button{
 }
 
 
-footer{
-  span{
-    color:#ffffff;
+footer {
+  span {
+    color: #ffffff;
     font-size: 16px;
     font-family: $font-family_footer;
     font-weight: 400;
   }
+
+
 }
 
+.facebook{
+  content: "\f39e";
+}
+.twitter{
+  content: "\f099";
+}
+.linkedin{
+  content: "\f0e1";
+}
+.google{
+  content: "\f0d5";
+}
+.behance{
+  content: "\f1b4";
+}
+.dribbble{
+  content: "\f17d";
+}
