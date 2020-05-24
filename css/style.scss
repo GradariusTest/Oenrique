@@ -1,10 +1,15 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import "OwlCarousel2/owl.carousel";
+@import "OwlCarousel2/owl.theme.default";
 
+$font-family_footer: 'Montserrat', sans-serif;
+$font-family_asap: 'Asap', sans-serif;
+$font-family_logo: 'Lato', sans-serif;
 
-$font-family_footer: "Montserrat";
-$font-family_asap: "Asap";
 $font-color_text-main: #4d4d4d;
 $font-color_text-info: #212121;
-
+$font-color_headers: #717171;
 $bg-color_first:  #ffffff;
 $bg-color_second:  #f6f6f6;
 
@@ -17,11 +22,22 @@ h1{
 }
 
 h3{
-  color: $font-color_text-main;
+  color: $font-color_headers;
   font-size: 46px;
   font-family: $font-family_asap;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  
+  &:before{
+    display: block;
+    content: " ";
+    width: 60px;
+    border-top: solid 5px $font-color_headers;
+    margin: auto;
+    height: 19px;
+  }
 }
 
 h5{
@@ -33,8 +49,10 @@ h5{
 
 p{
   color: $font-color_text-main;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1px;
 }
 
 span{
@@ -44,12 +62,14 @@ span{
   font-weight: 500;
 }
 
-a{
+a, .btn-default{
   text-transform: uppercase;
   font-size: 16px;
   color: $font-color_text-main;
   font-family: $font-family_asap;
   text-decoration: none;
+  padding: 18px 47px 16px 46px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 li{
@@ -69,28 +89,132 @@ button{
 }
 
 
+
+
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 72px;
+  
+  a{
+    margin-bottom: 8px;
+  }
+
+  span{
+    color: #000000;
+    font-family: $font-family_logo;
+  }
+  span:nth-of-type(1){
+    font-size: 14.15px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  span:nth-of-type(2){
+    font-size: 3.54px;
+    font-weight: 400;
+  }
+}
+
+
+
 .about{
   background-color: $bg-color_first;
+  padding: 110px 0 120px;
+  
+  .about__text{
+    padding-top: 49px;
+  }
+  
+  h3{
+    margin-bottom: 13px;
+    text-align: left;
+    &:before{
+      margin: 0;
+    }
+  }
+  p{
+    margin-bottom: 40px;
+  }
 }
 
 
 .services{
+  padding: 118px 0 114px;
   background-color: $bg-color_second;
+  
+  h3{
+    margin-bottom: 60px;
+  }
+  
   span{
     font-size: 24px;
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
   }
+  
+  .row{
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .row:nth-of-type(1){
+    margin-bottom: 88px;
+  }
+  
+  
+  .services__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+  }
+  
+  
+  
 }
+
 
 .skills{
   background-color: $bg-color_first;
+  padding: 115px 0 125px;
+  
+  h3{
+    margin-bottom: 62px;
+  }
+  
+  .skills_img{
+    display: flex;
+    justify-content: center;
+  }
 }
+
+
 
 .portfolio{
   background-color: $bg-color_second;
+  padding: 125px 0 122px;
+  text-align: center;
+  
+  h3{
+    margin-bottom: 46px;
+  }
+  
+  img{
+    margin: 0 15px 30px;
+  }
+  
 }
+
+
 
 .testimonials{
   background-color: $bg-color_first;
+  padding: 125px 0 122px;
+  
   span{
     font-family: $font-family_asap;
     font-style: italic;
@@ -137,21 +261,28 @@ footer {
 
 }
 
-.facebook{
+.ico-font{
+  font-family: Font Awesome\ 5 Brands;
+  font-size: 14px;
+}
+
+
+
+.facebook:after{
   content: "\f39e";
 }
-.twitter{
+.twitter:after{
   content: "\f099";
 }
-.linkedin{
+.linkedin:after{
   content: "\f0e1";
 }
-.google{
+.google:after{
   content: "\f0d5";
 }
-.behance{
+.behance:after{
   content: "\f1b4";
 }
-.dribbble{
+.dribbble:after{
   content: "\f17d";
 }
