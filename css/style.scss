@@ -1,27 +1,30 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import "OwlCarousel2/owl.carousel";
-@import "OwlCarousel2/owl.theme.default";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
 
 $font-family_footer: 'Montserrat', sans-serif;
 $font-family_asap: 'Asap', sans-serif;
 $font-family_logo: 'Lato', sans-serif;
+$font-family_social: 'Font Awesome\ 5 Brands', sans-serif;
 
 $font-color_text-main: #4d4d4d;
 $font-color_text-info: #212121;
 $font-color_headers: #717171;
-$bg-color_first:  #ffffff;
-$bg-color_second:  #f6f6f6;
+$bg-color_first: #ffffff;
+$bg-color_second: #f6f6f6;
+$bg-color_form: #ffffff;
+$bg-color_social: #ffffff;
 
-
-h1{
+h1 {
   color: $font-color_text-main;
   font-size: 90px;
   font-family: $font-family_asap;
   font-weight: 500;
+  margin: 0;
 }
 
-h3{
+h3 {
   color: $font-color_headers;
   font-size: 46px;
   font-family: $font-family_asap;
@@ -29,40 +32,41 @@ h3{
   text-transform: uppercase;
   letter-spacing: 10px;
   text-align: center;
-  
-  &:before{
+
+  &:before {
     display: block;
     content: " ";
     width: 60px;
-    border-top: solid 5px $font-color_headers;
+    border-top: solid 4px $font-color_headers;
     margin: auto;
     height: 19px;
   }
 }
 
-h5{
+h5 {
   font-size: 30px;
   font-family: $font-family_asap;
   font-weight: 500;
   color: $font-color_text-info;
 }
 
-p{
+p {
   color: $font-color_text-main;
+  font-family: $font-family_asap;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 1px;
 }
 
-span{
+span {
   color: $font-color_text-main;
   font-size: 22px;
   font-family: $font-family_asap;
   font-weight: 500;
 }
 
-a, .btn-default{
+.btn-default {
   text-transform: uppercase;
   font-size: 16px;
   color: $font-color_text-main;
@@ -72,15 +76,15 @@ a, .btn-default{
   background: rgba(255, 255, 255, 0.5);
 }
 
-li{
+li {
   list-style: none;
 }
 
-li>a{
+li > a {
   font-weight: 400;
 }
 
-button{
+button {
   text-transform: uppercase;
   font-size: 16px;
   color: $font-color_text-main;
@@ -90,199 +94,415 @@ button{
 
 
 
+header{
+  background-color: #e2e2e2;
+  padding-top: 30px;
+  padding-bottom: 9px;
+
+  .navbar-default{
+    background-color: transparent;
+    border: none;
+  }
+  
+  .header__logomenu{
+    margin-bottom: 10px;
+  }
+
+  .nav a{
+    text-transform: uppercase;
+    &:after{
+      content: "";
+      display: block;
+      width: 0;
+      
+      padding-top: 6px;
+      border-bottom: solid 2px #4d4d4d;
+      transition: 0.7s;
+    }
+    &:hover{
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+
+  .header__title{
+    padding-top: 160px;
+  }
+
+  h1{
+    margin-bottom: 4px;
+  }
+}
 
 
-
-.logo{
+.logo {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 72px;
-  
-  a{
-    margin-bottom: 8px;
+
+  a {
+    margin: 5px;
+  }
+  img{
+    margin: 0;
   }
 
-  span{
+  span {
     color: #000000;
     font-family: $font-family_logo;
   }
-  span:nth-of-type(1){
+
+  span:nth-of-type(1) {
     font-size: 14.15px;
     font-weight: 300;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
   }
-  span:nth-of-type(2){
+
+  span:nth-of-type(2) {
     font-size: 3.54px;
     font-weight: 400;
   }
 }
 
 
-
-.about{
+.about {
   background-color: $bg-color_first;
   padding: 110px 0 120px;
-  
-  .about__text{
+
+  .about__text {
     padding-top: 49px;
   }
-  
-  h3{
+
+  h3 {
     margin-bottom: 13px;
     text-align: left;
-    &:before{
+
+    &:before {
       margin: 0;
     }
   }
-  p{
+
+  p {
     margin-bottom: 40px;
   }
 }
 
 
-.services{
+.services {
   padding: 118px 0 114px;
   background-color: $bg-color_second;
-  
-  h3{
+
+  h3 {
     margin-bottom: 60px;
   }
-  
-  span{
+
+  span {
     font-size: 24px;
     margin-top: 15px;
     display: inline-block;
     text-align: center;
   }
-  
-  .row{
+
+  .row {
     display: flex;
     align-items: flex-end;
   }
-  
-  .row:nth-of-type(1){
+
+  .row:nth-of-type(1) {
     margin-bottom: 88px;
   }
-  
-  
-  .services__item{
+
+
+  .services__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
   }
-  
-  
-  
+
+
 }
 
 
-.skills{
+.skills {
   background-color: $bg-color_first;
   padding: 115px 0 125px;
-  
-  h3{
+
+  h3 {
     margin-bottom: 62px;
   }
-  
-  .skills_img{
+
+  .skills_img {
     display: flex;
     justify-content: center;
   }
 }
 
 
-
-.portfolio{
+.portfolio {
   background-color: $bg-color_second;
   padding: 125px 0 122px;
   text-align: center;
-  
-  h3{
+
+  h3 {
     margin-bottom: 46px;
   }
-  
-  img{
+
+  img {
     margin: 0 15px 30px;
   }
-  
+
 }
 
 
-
-.testimonials{
+.testimonials {
   background-color: $bg-color_first;
   padding: 125px 0 122px;
-  
-  span{
+
+  h3 {
+    margin-bottom: 58px;
+  }
+
+
+  .owl-carousel {
+    border: $font-color_text-info solid 1px;
+    padding: 80px 70px 40px 110px;
+
+  }
+
+  .owl-carousel__item {
+    display: flex;
+    justify-content: space-between;
+    width: auto !important;
+  }
+
+  .testimonials__img {
+    height: 160px;
+    width: 160px;
+    margin-right: 26px;
+  }
+
+  img {
+    width: auto !important;
+  }
+
+
+  .testimonials__txt > h5 {
+    text-transform: uppercase;
+    margin: 0;
+
+  }
+
+  .testimonials__txt > span {
+    margin-bottom: 10px;
+    display: inline-block;
     font-family: $font-family_asap;
     font-style: italic;
     color: $font-color_text-info;
     font-size: 12px;
     text-transform: uppercase;
   }
-  
-  p{
-    color: $font-color_text-info;
+
+  .testimonials__txt > p {
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $font-color_headers;
+  }
+
+
+  .owl-dot span {
+    border-radius: 0 !important;
+    background-color: $bg-color_second !important;
+    border: 1px black solid;
+    height: 12px !important;
+    width: 12px !important;
+    margin-right: 0 !important;
+  }
+
+  .owl-dot.active span {
+    background-color: black !important;
   }
 }
 
 
-.statistics{
+.statistics {
   background-color: $bg-color_second;
-  span{
-    color: $font-color_text-info;
+  padding: 50px 0 66px;
+  text-align: center;
+
+  img {
+    margin-bottom: 10px;
   }
+
+  h5 {
+    margin-bottom: 5px;
+  }
+
+  span {
+    color: $font-color_text-info;
+    text-transform: uppercase;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+
 }
 
-.empty{
+
+.empty {
   background-color: $bg-color_first;
   height: 155px;
 }
 
 
-.message{
-  h3{
-    color: #ffffff;
+footer {
+  background: url("../images/footer_02.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 104px;
+  
+
+  h3 {
+    color: $bg-color_form;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+
+    &:before {
+      border-color: $bg-color_form;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    color: $font-color_text-info;
+    background-color: $bg-color_form;
+    font-size: 16px;
+    padding: 23px 0 22px 10px;
+    border: none;
+  }
+
+  input {
+    margin-bottom: 30px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 208px;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 15px 45px 15px 52px;
     text-transform: uppercase;
   }
-}
+  
+  .footer__form{
+    margin-bottom: 60px;
+    text-align: center;
+  }
 
-
-footer {
+  .footer__social{
+    border-top: 1px solid $bg-color_form;
+    padding: 26px 0 30px 0;
+    
+  }
   span {
     color: #ffffff;
     font-size: 16px;
     font-family: $font-family_footer;
     font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
   }
-
-
+  
+  ul{
+    padding: 0;
+    display: inline-block;
+  }
+  
+  li{
+    display: inline;
+  }
 }
 
-.ico-font{
-  font-family: Font Awesome\ 5 Brands;
+
+.ico-font {
+  font-family: $font-family_social;
   font-size: 14px;
+  color: #4a5768;;
+  background-color: white;
+  margin-right: 8px;
+
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  text-align: center;
+  line-height: 28px;
+  text-decoration: none;
+
+  padding: 0;
+
+  &:hover{
+    color: white;
+  }
 }
 
 
+.facebook {
+  &:after {
+    content: "\f39e";
+  }
+  &:hover{
+    background-color: #3b5998;
+  }
+}
 
-.facebook:after{
-  content: "\f39e";
+.dribbble {
+  &:after {
+    content: "\f17d";
+  }
+  &:hover{
+    background-color: #ea4c89;
+
+  }
 }
-.twitter:after{
-  content: "\f099";
+
+.twitter {
+  &:after {
+    content: "\f099";
+  }
+  &:hover{
+    background-color: #00acee;
+  }
 }
-.linkedin:after{
-  content: "\f0e1";
+
+.linkedin {
+  &:after {
+    content: "\f0e1";
+  }
+  &:hover{
+    background-color: #0e76a8;
+  }
 }
-.google:after{
-  content: "\f0d5";
+
+.google {
+  &:after {
+    content: "\f0d5";
+  }
+  &:hover{
+    background-color: red;
+  }
 }
-.behance:after{
-  content: "\f1b4";
+
+.behance {
+  &:after {
+    content: "\f1b4";
+  }
+  &:hover{
+    background-color: #053eff;
+  }
 }
-.dribbble:after{
-  content: "\f17d";
-}
+
